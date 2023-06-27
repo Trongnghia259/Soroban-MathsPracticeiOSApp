@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Screenshot 2023-06-15 at 15.55.13.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

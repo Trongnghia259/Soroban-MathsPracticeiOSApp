@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		688F9D7BFAF8C99124A05168 /* Pods_Soroban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EB6C167941C008BCB9471B /* Pods_Soroban.framework */; };
+		C6A7DD932A3EAA6B00420A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */; };
+		C6A7DD952A3EAA6B00420A81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DD942A3EAA6B00420A81 /* SceneDelegate.swift */; };
+		C6A7DD9C2A3EAA6C00420A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A7DD9B2A3EAA6C00420A81 /* Assets.xcassets */; };
+		C6A7DD9F2A3EAA6C00420A81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A7DD9D2A3EAA6C00420A81 /* LaunchScreen.storyboard */; };
+		C6A7DDA92A3EAB7900420A81 /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DDA82A3EAB7900420A81 /* Sum.swift */; };
+		C6A7DDAB2A3EAB8700420A81 /* Minus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DDAA2A3EAB8700420A81 /* Minus.swift */; };
+		C6A7DDAD2A3EAB8E00420A81 /* Multiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DDAC2A3EAB8E00420A81 /* Multiply.swift */; };
+		C6A7DDAF2A3EAB9C00420A81 /* Divide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DDAE2A3EAB9C00420A81 /* Divide.swift */; };
+		C6A7DDB32A3EAD1900420A81 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DDB22A3EAD1900420A81 /* MainViewController.swift */; };
+		C6A7DDBA2A3EF75500420A81 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DDB92A3EF75500420A81 /* SettingVC.swift */; };
+		C6B00E682A417EFD004FA973 /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B00E672A417EFD004FA973 /* ComingSoon.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49EB6C167941C008BCB9471B /* Pods_Soroban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soroban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE11D7C8536A4836F386AA9 /* Pods-Soroban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soroban.debug.xcconfig"; path = "Target Support Files/Pods-Soroban/Pods-Soroban.debug.xcconfig"; sourceTree = "<group>"; };
+		A8D80D8D44AAE3647545451B /* Pods-Soroban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soroban.release.xcconfig"; path = "Target Support Files/Pods-Soroban/Pods-Soroban.release.xcconfig"; sourceTree = "<group>"; };
+		C6A7DD8F2A3EAA6B00420A81 /* Soroban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soroban.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C6A7DD942A3EAA6B00420A81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C6A7DD9B2A3EAA6C00420A81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6A7DD9E2A3EAA6C00420A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6A7DDA02A3EAA6C00420A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		C6A7DDA82A3EAB7900420A81 /* Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
+		C6A7DDAA2A3EAB8700420A81 /* Minus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minus.swift; sourceTree = "<group>"; };
+		C6A7DDAC2A3EAB8E00420A81 /* Multiply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiply.swift; sourceTree = "<group>"; };
+		C6A7DDAE2A3EAB9C00420A81 /* Divide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divide.swift; sourceTree = "<group>"; };
+		C6A7DDB22A3EAD1900420A81 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C6A7DDB92A3EF75500420A81 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		C6B00E672A417EFD004FA973 /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6A7DD8C2A3EAA6B00420A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				688F9D7BFAF8C99124A05168 /* Pods_Soroban.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		893701DD2368C93C8F5A0E1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DE11D7C8536A4836F386AA9 /* Pods-Soroban.debug.xcconfig */,
+				A8D80D8D44AAE3647545451B /* Pods-Soroban.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93766DE2590BE74B0B045534 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49EB6C167941C008BCB9471B /* Pods_Soroban.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6A7DD862A3EAA6B00420A81 = {
+			isa = PBXGroup;
+			children = (
+				C6A7DD912A3EAA6B00420A81 /* Soroban */,
+				C6A7DD902A3EAA6B00420A81 /* Products */,
+				893701DD2368C93C8F5A0E1F /* Pods */,
+				93766DE2590BE74B0B045534 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C6A7DD902A3EAA6B00420A81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6A7DD8F2A3EAA6B00420A81 /* Soroban.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6A7DD912A3EAA6B00420A81 /* Soroban */ = {
+			isa = PBXGroup;
+			children = (
+				C6A7DDA62A3EAB5200420A81 /* Source */,
+				C6A7DDB82A3EE46F00420A81 /* View */,
+				C6A7DDA72A3EAB6D00420A81 /* Maths */,
+			);
+			path = Soroban;
+			sourceTree = "<group>";
+		};
+		C6A7DDA62A3EAB5200420A81 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */,
+				C6A7DD942A3EAA6B00420A81 /* SceneDelegate.swift */,
+				C6A7DD9B2A3EAA6C00420A81 /* Assets.xcassets */,
+				C6A7DD9D2A3EAA6C00420A81 /* LaunchScreen.storyboard */,
+				C6A7DDA02A3EAA6C00420A81 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C6A7DDA72A3EAB6D00420A81 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				C6A7DDA82A3EAB7900420A81 /* Sum.swift */,
+				C6A7DDAA2A3EAB8700420A81 /* Minus.swift */,
+				C6A7DDAC2A3EAB8E00420A81 /* Multiply.swift */,
+				C6A7DDAE2A3EAB9C00420A81 /* Divide.swift */,
+			);
+			path = Maths;
+			sourceTree = "<group>";
+		};
+		C6A7DDB82A3EE46F00420A81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6A7DDB22A3EAD1900420A81 /* MainViewController.swift */,
+				C6A7DDB92A3EF75500420A81 /* SettingVC.swift */,
+				C6B00E672A417EFD004FA973 /* ComingSoon.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6A7DD8E2A3EAA6B00420A81 /* Soroban */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6A7DDA32A3EAA6C00420A81 /* Build configuration list for PBXNativeTarget "Soroban" */;
+			buildPhases = (
+				49C147FF380069858E7A2A5E /* [CP] Check Pods Manifest.lock */,
+				C6A7DD8B2A3EAA6B00420A81 /* Sources */,
+				C6A7DD8C2A3EAA6B00420A81 /* Frameworks */,
+				C6A7DD8D2A3EAA6B00420A81 /* Resources */,
+				315757B299E90D762CDF661C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Soroban;
+			productName = Soroban;
+			productReference = C6A7DD8F2A3EAA6B00420A81 /* Soroban.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6A7DD872A3EAA6B00420A81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C6A7DD8E2A3EAA6B00420A81 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = C6A7DD8A2A3EAA6B00420A81 /* Build configuration list for PBXProject "Soroban" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6A7DD862A3EAA6B00420A81;
+			productRefGroup = C6A7DD902A3EAA6B00420A81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6A7DD8E2A3EAA6B00420A81 /* Soroban */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6A7DD8D2A3EAA6B00420A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A7DD9F2A3EAA6C00420A81 /* LaunchScreen.storyboard in Resources */,
+				C6A7DD9C2A3EAA6C00420A81 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		315757B299E90D762CDF661C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soroban/Pods-Soroban-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Soroban/Pods-Soroban-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Soroban/Pods-Soroban-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49C147FF380069858E7A2A5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soroban-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6A7DD8B2A3EAA6B00420A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A7DDAF2A3EAB9C00420A81 /* Divide.swift in Sources */,
+				C6A7DDBA2A3EF75500420A81 /* SettingVC.swift in Sources */,
+				C6A7DDA92A3EAB7900420A81 /* Sum.swift in Sources */,
+				C6A7DDAB2A3EAB8700420A81 /* Minus.swift in Sources */,
+				C6A7DDAD2A3EAB8E00420A81 /* Multiply.swift in Sources */,
+				C6A7DD932A3EAA6B00420A81 /* AppDelegate.swift in Sources */,
+				C6A7DD952A3EAA6B00420A81 /* SceneDelegate.swift in Sources */,
+				C6A7DDB32A3EAD1900420A81 /* MainViewController.swift in Sources */,
+				C6B00E682A417EFD004FA973 /* ComingSoon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C6A7DD9D2A3EAA6C00420A81 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6A7DD9E2A3EAA6C00420A81 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6A7DDA12A3EAA6C00420A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C6A7DDA22A3EAA6C00420A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6A7DDA42A3EAA6C00420A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DE11D7C8536A4836F386AA9 /* Pods-Soroban.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S4J9Z9A3K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Soroban/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Collection-project.Soroban";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6A7DDA52A3EAA6C00420A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D80D8D44AAE3647545451B /* Pods-Soroban.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S4J9Z9A3K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Soroban/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Collection-project.Soroban";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6A7DD8A2A3EAA6B00420A81 /* Build configuration list for PBXProject "Soroban" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6A7DDA12A3EAA6C00420A81 /* Debug */,
+				C6A7DDA22A3EAA6C00420A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6A7DDA32A3EAA6C00420A81 /* Build configuration list for PBXNativeTarget "Soroban" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6A7DDA42A3EAA6C00420A81 /* Debug */,
+				C6A7DDA52A3EAA6C00420A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6A7DD872A3EAA6B00420A81 /* Project object */;
+}
