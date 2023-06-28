@@ -117,7 +117,7 @@ class MainViewController: UIViewController {
         navigationController?.pushViewController(Multiply(), animated: true)
     }
     @objc func presentDivide() {
-        navigationController?.pushViewController(TestUIVC(), animated: true)
+        navigationController?.pushViewController(Comingsoon(), animated: true)
     }
     @objc func presentSetting() {
         present(SettingVC(), animated: true)
