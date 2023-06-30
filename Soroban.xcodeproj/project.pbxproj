@@ -8,8 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		688F9D7BFAF8C99124A05168 /* Pods_Soroban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EB6C167941C008BCB9471B /* Pods_Soroban.framework */; };
+		C69786942A4EA8FC00EFE9F3 /* UiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786932A4EA8FC00EFE9F3 /* UiView.swift */; };
+		C69786972A4EB4C700EFE9F3 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786962A4EB4C700EFE9F3 /* Localization.swift */; };
+		C69786992A4EB76A00EFE9F3 /* RawRepresentable + Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786982A4EB76A00EFE9F3 /* RawRepresentable + Localized.swift */; };
+		C697869C2A4EB7DE00EFE9F3 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697869B2A4EB7DE00EFE9F3 /* Application.swift */; };
+		C697869E2A4EB83800EFE9F3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697869D2A4EB83800EFE9F3 /* Language.swift */; };
+		C69786A02A4EB9A000EFE9F3 /* SelectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697869F2A4EB9A000EFE9F3 /* SelectionItemViewModel.swift */; };
+		C69786A22A4EBA8F00EFE9F3 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786A12A4EBA8F00EFE9F3 /* SettingModel.swift */; };
+		C69786A92A4EBB4100EFE9F3 /* UserStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786A82A4EBB4100EFE9F3 /* UserStorageRepository.swift */; };
+		C69786AD2A4EBBA700EFE9F3 /* UserStorageRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786AC2A4EBBA700EFE9F3 /* UserStorageRepositoryProtocol.swift */; };
+		C69786B02A4EBC0100EFE9F3 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786AF2A4EBC0100EFE9F3 /* Storage.swift */; };
+		C69786B22A4EBC5B00EFE9F3 /* StorageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786B12A4EBC5B00EFE9F3 /* StorageKey.swift */; };
+		C69786B62A4EBD4200EFE9F3 /* StringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786B52A4EBD4200EFE9F3 /* StringError.swift */; };
+		C69786B92A4EC0ED00EFE9F3 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786B82A4EC0ED00EFE9F3 /* DIContainer.swift */; };
+		C69786BF2A4EC1F600EFE9F3 /* SettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786BE2A4EC1F600EFE9F3 /* SettingsUseCase.swift */; };
+		C69786C12A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786C02A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift */; };
+		C69786C92A4EC8B200EFE9F3 /* AppInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786C82A4EC8B200EFE9F3 /* AppInfoRepository.swift */; };
 		C69DA3322A4D795A00F9BF75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C69DA3342A4D795A00F9BF75 /* Localizable.strings */; };
-		C69DA3372A4DE25E00F9BF75 /* Ext +.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69DA3362A4DE25E00F9BF75 /* Ext +.swift */; };
+		C69DA3372A4DE25E00F9BF75 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69DA3362A4DE25E00F9BF75 /* String.swift */; };
 		C6A7DD932A3EAA6B00420A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */; };
 		C6A7DD952A3EAA6B00420A81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DD942A3EAA6B00420A81 /* SceneDelegate.swift */; };
 		C6A7DD9C2A3EAA6C00420A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A7DD9B2A3EAA6C00420A81 /* Assets.xcassets */; };
@@ -27,9 +43,25 @@
 		49EB6C167941C008BCB9471B /* Pods_Soroban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soroban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE11D7C8536A4836F386AA9 /* Pods-Soroban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soroban.debug.xcconfig"; path = "Target Support Files/Pods-Soroban/Pods-Soroban.debug.xcconfig"; sourceTree = "<group>"; };
 		A8D80D8D44AAE3647545451B /* Pods-Soroban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soroban.release.xcconfig"; path = "Target Support Files/Pods-Soroban/Pods-Soroban.release.xcconfig"; sourceTree = "<group>"; };
+		C69786932A4EA8FC00EFE9F3 /* UiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiView.swift; sourceTree = "<group>"; };
+		C69786962A4EB4C700EFE9F3 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		C69786982A4EB76A00EFE9F3 /* RawRepresentable + Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RawRepresentable + Localized.swift"; sourceTree = "<group>"; };
+		C697869B2A4EB7DE00EFE9F3 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C697869D2A4EB83800EFE9F3 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		C697869F2A4EB9A000EFE9F3 /* SelectionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionItemViewModel.swift; sourceTree = "<group>"; };
+		C69786A12A4EBA8F00EFE9F3 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		C69786A82A4EBB4100EFE9F3 /* UserStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorageRepository.swift; sourceTree = "<group>"; };
+		C69786AC2A4EBBA700EFE9F3 /* UserStorageRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorageRepositoryProtocol.swift; sourceTree = "<group>"; };
+		C69786AF2A4EBC0100EFE9F3 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		C69786B12A4EBC5B00EFE9F3 /* StorageKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKey.swift; sourceTree = "<group>"; };
+		C69786B52A4EBD4200EFE9F3 /* StringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringError.swift; sourceTree = "<group>"; };
+		C69786B82A4EC0ED00EFE9F3 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		C69786BE2A4EC1F600EFE9F3 /* SettingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUseCase.swift; sourceTree = "<group>"; };
+		C69786C02A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactoryProtocol.swift; sourceTree = "<group>"; };
+		C69786C82A4EC8B200EFE9F3 /* AppInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoRepository.swift; sourceTree = "<group>"; };
 		C69DA3332A4D795A00F9BF75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C69DA3352A4D795F00F9BF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C69DA3362A4DE25E00F9BF75 /* Ext +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext +.swift"; sourceTree = "<group>"; };
+		C69DA3362A4DE25E00F9BF75 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C69DA3382A4DE56800F9BF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6A7DD8F2A3EAA6B00420A81 /* Soroban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soroban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +106,137 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C69786922A4EA8BC00EFE9F3 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				C69DA3362A4DE25E00F9BF75 /* String.swift */,
+				C69786932A4EA8FC00EFE9F3 /* UiView.swift */,
+				C69786982A4EB76A00EFE9F3 /* RawRepresentable + Localized.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		C69786952A4EB4AD00EFE9F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C69786962A4EB4C700EFE9F3 /* Localization.swift */,
+				C69786B42A4EBD2600EFE9F3 /* Constaints */,
+				C697869F2A4EB9A000EFE9F3 /* SelectionItemViewModel.swift */,
+				C69786A12A4EBA8F00EFE9F3 /* SettingModel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C697869A2A4EB7CC00EFE9F3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C697869B2A4EB7DE00EFE9F3 /* Application.swift */,
+				C697869D2A4EB83800EFE9F3 /* Language.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C69786A32A4EBAF000EFE9F3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C69786C02A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift */,
+				C69786AE2A4EBBE300EFE9F3 /* Storage */,
+				C69786A42A4EBB0100EFE9F3 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C69786A42A4EBB0100EFE9F3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C69786C72A4EC8A900EFE9F3 /* Remote */,
+				C69786A72A4EBB3300EFE9F3 /* Local */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C69786A72A4EBB3300EFE9F3 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C69786A82A4EBB4100EFE9F3 /* UserStorageRepository.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		C69786AA2A4EBB7400EFE9F3 /* Doumain */ = {
+			isa = PBXGroup;
+			children = (
+				C69786BD2A4EC1DC00EFE9F3 /* UserCases */,
+				C69786AB2A4EBB8100EFE9F3 /* Businesses */,
+			);
+			path = Doumain;
+			sourceTree = "<group>";
+		};
+		C69786AB2A4EBB8100EFE9F3 /* Businesses */ = {
+			isa = PBXGroup;
+			children = (
+				C69786AC2A4EBBA700EFE9F3 /* UserStorageRepositoryProtocol.swift */,
+			);
+			path = Businesses;
+			sourceTree = "<group>";
+		};
+		C69786AE2A4EBBE300EFE9F3 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C69786AF2A4EBC0100EFE9F3 /* Storage.swift */,
+				C69786B12A4EBC5B00EFE9F3 /* StorageKey.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		C69786B32A4EBD0700EFE9F3 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				C69786952A4EB4AD00EFE9F3 /* Helpers */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		C69786B42A4EBD2600EFE9F3 /* Constaints */ = {
+			isa = PBXGroup;
+			children = (
+				C69786B52A4EBD4200EFE9F3 /* StringError.swift */,
+			);
+			path = Constaints;
+			sourceTree = "<group>";
+		};
+		C69786B72A4EC0E300EFE9F3 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				C69786BA2A4EC15B00EFE9F3 /* Doumain */,
+				C69786B82A4EC0ED00EFE9F3 /* DIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		C69786BA2A4EC15B00EFE9F3 /* Doumain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Doumain;
+			sourceTree = "<group>";
+		};
+		C69786BD2A4EC1DC00EFE9F3 /* UserCases */ = {
+			isa = PBXGroup;
+			children = (
+				C69786BE2A4EC1F600EFE9F3 /* SettingsUseCase.swift */,
+			);
+			path = UserCases;
+			sourceTree = "<group>";
+		};
+		C69786C72A4EC8A900EFE9F3 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C69786C82A4EC8B200EFE9F3 /* AppInfoRepository.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		C6A7DD862A3EAA6B00420A81 = {
 			isa = PBXGroup;
 			children = (
@@ -95,17 +258,22 @@
 		C6A7DD912A3EAA6B00420A81 /* Soroban */ = {
 			isa = PBXGroup;
 			children = (
-				C6A7DDA62A3EAB5200420A81 /* Source */,
+				C6A7DDA62A3EAB5200420A81 /* Sources */,
 				C6A7DDB82A3EE46F00420A81 /* View */,
 				C6A7DDA72A3EAB6D00420A81 /* Maths */,
-				C69DA3362A4DE25E00F9BF75 /* Ext +.swift */,
+				C69786922A4EA8BC00EFE9F3 /* Extention */,
 			);
 			path = Soroban;
 			sourceTree = "<group>";
 		};
-		C6A7DDA62A3EAB5200420A81 /* Source */ = {
+		C6A7DDA62A3EAB5200420A81 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C69786B72A4EC0E300EFE9F3 /* DIContainer */,
+				C69786B32A4EBD0700EFE9F3 /* Supporting */,
+				C69786AA2A4EBB7400EFE9F3 /* Doumain */,
+				C69786A32A4EBAF000EFE9F3 /* Data */,
+				C697869A2A4EB7CC00EFE9F3 /* Application */,
 				C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */,
 				C6A7DD942A3EAA6B00420A81 /* SceneDelegate.swift */,
 				C6A7DD9B2A3EAA6C00420A81 /* Assets.xcassets */,
@@ -113,7 +281,7 @@
 				C6A7DDA02A3EAA6C00420A81 /* Info.plist */,
 				C69DA3342A4D795A00F9BF75 /* Localizable.strings */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		C6A7DDA72A3EAB6D00420A81 /* Maths */ = {
@@ -252,15 +420,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C69DA3372A4DE25E00F9BF75 /* Ext +.swift in Sources */,
+				C69786942A4EA8FC00EFE9F3 /* UiView.swift in Sources */,
+				C69786B92A4EC0ED00EFE9F3 /* DIContainer.swift in Sources */,
+				C69DA3372A4DE25E00F9BF75 /* String.swift in Sources */,
+				C69786972A4EB4C700EFE9F3 /* Localization.swift in Sources */,
 				C6A7DDAF2A3EAB9C00420A81 /* Divide.swift in Sources */,
 				C6A7DDBA2A3EF75500420A81 /* SettingVC.swift in Sources */,
 				C6A7DDA92A3EAB7900420A81 /* Sum.swift in Sources */,
+				C697869E2A4EB83800EFE9F3 /* Language.swift in Sources */,
+				C69786B62A4EBD4200EFE9F3 /* StringError.swift in Sources */,
 				C6A7DDAB2A3EAB8700420A81 /* Minus.swift in Sources */,
+				C69786AD2A4EBBA700EFE9F3 /* UserStorageRepositoryProtocol.swift in Sources */,
+				C69786B02A4EBC0100EFE9F3 /* Storage.swift in Sources */,
+				C69786B22A4EBC5B00EFE9F3 /* StorageKey.swift in Sources */,
+				C69786A02A4EB9A000EFE9F3 /* SelectionItemViewModel.swift in Sources */,
 				C6A7DDAD2A3EAB8E00420A81 /* Multiply.swift in Sources */,
+				C69786A92A4EBB4100EFE9F3 /* UserStorageRepository.swift in Sources */,
+				C69786C92A4EC8B200EFE9F3 /* AppInfoRepository.swift in Sources */,
+				C697869C2A4EB7DE00EFE9F3 /* Application.swift in Sources */,
 				C6A7DD932A3EAA6B00420A81 /* AppDelegate.swift in Sources */,
+				C69786BF2A4EC1F600EFE9F3 /* SettingsUseCase.swift in Sources */,
 				C6A7DD952A3EAA6B00420A81 /* SceneDelegate.swift in Sources */,
+				C69786A22A4EBA8F00EFE9F3 /* SettingModel.swift in Sources */,
+				C69786C12A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift in Sources */,
 				C6A7DDB32A3EAD1900420A81 /* MainViewController.swift in Sources */,
+				C69786992A4EB76A00EFE9F3 /* RawRepresentable + Localized.swift in Sources */,
 				C6B00E682A417EFD004FA973 /* ComingSoon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +596,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 2S4J9Z9A3K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Soroban/Info.plist;
@@ -426,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trongnghia.soroban;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -444,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 2S4J9Z9A3K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Soroban/Info.plist;
@@ -458,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.trongnghia.soroban;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

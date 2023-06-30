@@ -1,0 +1,19 @@
+
+"title_mathoperations" = "Các Dạng Toán";
+"title_setting" = "Cài đặt";
+
+"button_start" = "Bắt đầu";
+"button_finish" = "Kết thúc";
+"button_confirm" = "Xác nhận";
+
+"setting_numbera" = "Chọn số ngẫu nhiên A :";
+"setting_numberb" = "Chọn số ngẫu nhiên B :";
+"setting_from" = "Bắt đầu từ số:";
+"setting_to" = "Đến số :";
+"setting_speed_slow" = "Chậm";
+"setting_speed_normal" = "Bình thường";
+"setting_speed_fast" = "Nhanh";
+"setting_speed_veryfast" = "Rất nhanh";
+"setting_speed" = "Tốc độ hiển thị :";
+"setting_speed_calculations" = "Số phép tính :";
+

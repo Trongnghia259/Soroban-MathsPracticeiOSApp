@@ -21,6 +21,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let langStr = Locale.current.language.languageCode!.identifier
+        print(langStr)
+        
         imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
@@ -41,7 +44,7 @@ class MainViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
         
-        mathsLabel.text = "MathOperations".localized()
+        mathsLabel.text = Localization.Title.mathsOperations.localized
         print(mathsLabel)
         mathsLabel.font = .systemFont(ofSize: 60, weight: .heavy)
         mathsLabel.textColor = .black
@@ -109,7 +112,8 @@ class MainViewController: UIViewController {
         
     }
     @objc func  presentSum() {
-        navigationController?.pushViewController(Sum(), animated: true)
+//        navigationController?.pushViewController(Sum(), animated: true)
+        show(Sum(), sender: nil)
     }
     @objc func presentMinus() {
         navigationController?.pushViewController(Minus(), animated: true)

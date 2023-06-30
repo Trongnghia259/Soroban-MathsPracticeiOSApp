@@ -39,6 +39,7 @@ class Sum: UIViewController {
         super.viewDidLoad()
         getValue()
         settingUI()
+        
     }
     @objc func start() {
         numberLabel.text = "\(startNumber)"
@@ -69,12 +70,12 @@ class Sum: UIViewController {
         speeds = UserDefaults.standard.double(forKey: "speed")
         calculator = UserDefaults.standard.integer(forKey: "calculator")
         if minA == 0 {
-             minA = 1
-             maxA = 10
-             minB = 1
-             maxB = 10
-             speeds = 2.0
-             calculator = 5
+            minA = 1
+            maxA = 10
+            minB = 1
+            maxB = 10
+            speeds = 2.0
+            calculator = 5
         }
         speed = speeds
         timemath = calculator
@@ -89,12 +90,15 @@ class Sum: UIViewController {
         numberLabel.text = "= \(startNumber)"
         reloadInputViews()
         openAnimate()
-        startNumber = Int.random(in: 1..<10)
+        startNumber = Int.random(in: minA..<maxA)
         finishButton.isHidden = true
         startButton.isHidden = false
     }
+}
+
+extension Sum {
     func settingUI() {
-        tabBarController?.tabBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
@@ -125,7 +129,7 @@ class Sum: UIViewController {
             $0.height.equalTo(80)
         })
         startButton.backgroundColor = .yellow
-        startButton.setTitle("Start".localized(), for: .normal)
+        startButton.setTitle(Localization.Button.start.localized, for: .normal)
         startButton.titleLabel?.font = .systemFont(ofSize: 35, weight: .medium)
         startButton.setTitleColor(.black, for: .normal)
         startButton.titleLabel?.textAlignment = .center
@@ -138,10 +142,11 @@ class Sum: UIViewController {
             $0.height.equalTo(80)
         })
         finishButton.titleLabel?.font = .systemFont(ofSize: 35, weight: .medium)
-        finishButton.setTitle("Finish".localized(), for: .normal)
+        finishButton.setTitle(Localization.Button.finish.localized, for: .normal)
         finishButton.setTitleColor(.black, for: .normal)
         finishButton.layer.cornerRadius = 12
         finishButton.isHidden = true
         finishButton.addTarget(nil, action: #selector(finnish), for: .touchUpInside)
     }
 }
+

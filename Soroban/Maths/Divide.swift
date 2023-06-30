@@ -65,6 +65,8 @@ class Divide: UIViewController {
         startButton.isHidden = false
     }
     func setUI() {
+        UINavigationBar.appearance().barTintColor = UIColor.blue.withAlphaComponent(1)
+        UINavigationBar.appearance().isTranslucent = false
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
