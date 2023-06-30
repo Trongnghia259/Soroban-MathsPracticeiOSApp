@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class SettingVC: UIViewController {
+class SettingVC: UIViewController, UITextFieldDelegate {
     
     private let titleLabel: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.text = "Setting"
+        title.text = "Setting".localized()
         title.font = .systemFont(ofSize: 30, weight: .light)
         title.textColor = .black
         return title
@@ -48,9 +48,10 @@ class SettingVC: UIViewController {
     var speedPickerView = UIPickerView()
     var calculationPickerView = UIPickerView()
     
-    let number = ["1","10","100","1000","10000","100000"]
-    let speeds = ["Slow", "Normal", "Fast", "Fastest"]
-    let calculations = ["1","3","5","10","15","20","25","30"]
+    let speeds = ["Slow".localized(),
+                  "Normal".localized(),
+                  "Fast".localized(),
+                  "Very Fast".localized()]
     
     var minA: Int!
     var maxA: Int!
@@ -60,35 +61,24 @@ class SettingVC: UIViewController {
     var calculator: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
+        minimumATextField.keyboardType = .asciiCapableNumberPad
         
         view.backgroundColor = .systemGray5
         setUI()
-        minimumATextField.inputView = minimumAPickerView
-        maximumATextField.inputView = maximumAPickerView
-        minimumBTextField.inputView = minimumBPickerView
-        maximumBTextField.inputView = maximumBPickerView
-        speedTextField.inputView = speedPickerView
-        calculationTextField.inputView = calculationPickerView
-        
-        minimumAPickerView.delegate = self
-        maximumAPickerView.delegate = self
-        minimumBPickerView.delegate = self
-        maximumBPickerView.delegate = self
-        speedPickerView.delegate = self
-        calculationPickerView.delegate = self
+        minimumATextField.delegate = self
+        maximumATextField.delegate = self
+        minimumBTextField.delegate = self
+        maximumBTextField.delegate = self
+        calculationTextField.delegate = self
 
-        minimumAPickerView.tag = 1
-        maximumAPickerView.tag = 2
-        minimumBPickerView.tag = 3
-        maximumBPickerView.tag = 4
-        speedPickerView.tag = 5
-        calculationPickerView.tag = 6
+        speedTextField.inputView = speedPickerView
+        speedPickerView.delegate = self
         
-        minimumATextField.text = "1"
-        maximumATextField.text = "10"
+        minimumATextField.text = "50"
+        maximumATextField.text = "100"
         minimumBTextField.text = "1"
         maximumBTextField.text = "10"
-        speedTextField.text = "Normal"
+        speedTextField.text = "Fast".localized()
         calculationTextField.text = "5"
 
     }
@@ -149,97 +139,109 @@ class SettingVC: UIViewController {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(50)
         })
-        setNumberALabel.text = "Set Random Number A:"
+        setNumberALabel.text = "Set Random Number A:".localized()
         setNumberALabel.snp.makeConstraints({
             $0.top.equalTo(titleLabel).offset(50)
             $0.left.equalToSuperview().offset(20)
         })
         setMiniumALabel.font = .systemFont(ofSize: 15, weight: .light)
-        setMiniumALabel.text = "Minimum A:"
+        setMiniumALabel.text = "From".localized()
         setMiniumALabel.snp.makeConstraints({
-            $0.top.equalTo(setNumberALabel).offset(30)
+            $0.top.equalTo(setNumberALabel).offset(50)
             $0.left.equalToSuperview().offset(20)
+
+        })
+        minimumATextField.textAlignment = .center
+        minimumATextField.backgroundColor = .white
+        minimumATextField.layer.cornerRadius = 12
+        minimumATextField.snp.makeConstraints({
+            $0.top.equalTo(setNumberALabel).offset(30)
+            $0.left.equalTo(setMiniumALabel.safeAreaLayoutGuide.snp.right).offset(10)
+            $0.height.equalTo(50)
+            $0.width.equalTo(100)
         })
         setMaximumALabel.font = .systemFont(ofSize: 15, weight: .light)
-        setMaximumALabel.text = "Maximum A:"
+        setMaximumALabel.text = "To".localized()
         setMaximumALabel.snp.makeConstraints({
-            $0.top.equalTo(setMiniumALabel).offset(30)
-            $0.left.equalToSuperview().offset(20)
+            $0.top.equalTo(setNumberALabel).offset(50)
+            $0.left.equalTo(minimumATextField.safeAreaLayoutGuide.snp.right).offset(10)
         })
-        setNumberBLabel.text = "Set Random Number B:"
+        maximumATextField.textAlignment = .center
+        maximumATextField.backgroundColor = .white
+        maximumATextField.layer.cornerRadius = 12
+        maximumATextField.snp.makeConstraints({
+            $0.top.equalTo(setNumberALabel).offset(30)
+            $0.left.equalTo(setMaximumALabel.safeAreaLayoutGuide.snp.right).offset(10)
+            $0.height.equalTo(50)
+            $0.width.equalTo(100)
+        })
+
+        setNumberBLabel.text = "Set Random Number B:".localized()
         setNumberBLabel.snp.makeConstraints({
             $0.top.equalTo(setMaximumALabel).offset(50)
             $0.left.equalToSuperview().offset(20)
         })
         setMiniumBLabel.font = .systemFont(ofSize: 15, weight: .light)
-        setMiniumBLabel.text = "Minimum B:"
+        setMiniumBLabel.text = "From".localized()
         setMiniumBLabel.snp.makeConstraints({
-            $0.top.equalTo(setNumberBLabel).offset(30)
+            $0.top.equalTo(setNumberBLabel).offset(50)
             $0.left.equalToSuperview().offset(20)
         })
         setMaximumBLabel.font = .systemFont(ofSize: 15, weight: .light)
-        setMaximumBLabel.text = "Maximum B:"
+        setMaximumBLabel.text = "To".localized()
         setMaximumBLabel.snp.makeConstraints({
-            $0.top.equalTo(setMiniumBLabel).offset(30)
-            $0.left.equalToSuperview().offset(20)
-        })
-        setSpeedLabel.text = "Speed :"
-        setSpeedLabel.snp.makeConstraints({
-            $0.top.equalTo(setMaximumBLabel).offset(50)
-            $0.left.equalToSuperview().offset(20)
-        })
-        setCaculationLabel.text = "Number of Calculations:"
-        setCaculationLabel.snp.makeConstraints({
-            $0.top.equalTo(setSpeedLabel).offset(50)
-            $0.left.equalToSuperview().offset(20)
-        })
-        minimumATextField.textAlignment = .center
-        minimumATextField.translatesAutoresizingMaskIntoConstraints = true
-        minimumATextField.backgroundColor = .white
-        minimumATextField.snp.makeConstraints({
-            $0.top.equalTo(titleLabel).offset(80)
-            $0.right.equalToSuperview().offset(-30)
-            $0.width.equalTo(150)
-        })
-        maximumATextField.textAlignment = .center
-        maximumATextField.backgroundColor = .white
-        maximumATextField.snp.makeConstraints({
-            $0.top.equalTo(minimumATextField).offset(30)
-            $0.right.equalToSuperview().offset(-30)
-            $0.width.equalTo(150)
+            $0.top.equalTo(setNumberBLabel).offset(50)
+            $0.left.equalTo(minimumBTextField.safeAreaLayoutGuide.snp.right).offset(10)
         })
         minimumBTextField.textAlignment = .center
-        minimumBTextField.translatesAutoresizingMaskIntoConstraints = true
         minimumBTextField.backgroundColor = .white
+        minimumBTextField.layer.cornerRadius = 12
         minimumBTextField.snp.makeConstraints({
-            $0.top.equalTo(maximumATextField).offset(80)
-            $0.right.equalToSuperview().offset(-30)
-            $0.width.equalTo(150)
+            $0.top.equalTo(setNumberBLabel).offset(30)
+            $0.left.equalTo(setMiniumBLabel.safeAreaLayoutGuide.snp.right).offset(10)
+            $0.height.equalTo(50)
+            $0.width.equalTo(100)
         })
         maximumBTextField.textAlignment = .center
         maximumBTextField.backgroundColor = .white
+        maximumBTextField.layer.cornerRadius = 12
         maximumBTextField.snp.makeConstraints({
-            $0.top.equalTo(minimumBTextField).offset(30)
-            $0.right.equalToSuperview().offset(-30)
-            $0.width.equalTo(150)
+            $0.top.equalTo(setNumberBLabel).offset(30)
+            $0.left.equalTo(setMaximumBLabel.safeAreaLayoutGuide.snp.right).offset(10)
+            $0.height.equalTo(50)
+            $0.width.equalTo(100)
+        })
+        
+        setSpeedLabel.text = "Speed :".localized()
+        setSpeedLabel.snp.makeConstraints({
+            $0.top.equalTo(setMaximumBLabel.safeAreaLayoutGuide.snp.bottom).offset(50)
+            $0.left.equalToSuperview().offset(20)
         })
         speedTextField.textAlignment = .center
-        speedTextField.translatesAutoresizingMaskIntoConstraints = true
+        speedTextField.layer.cornerRadius = 12
         speedTextField.backgroundColor = .white
         speedTextField.snp.makeConstraints({
-            $0.top.equalTo(maximumBTextField).offset(50)
-            $0.right.equalToSuperview().offset(-30)
+            $0.top.equalTo(maximumBTextField.safeAreaLayoutGuide.snp.bottom).offset(30)
+            $0.left.equalTo(setSpeedLabel).offset(200)
             $0.width.equalTo(150)
+            $0.height.equalTo(50)
+        })
+        setCaculationLabel.text = "Number of Calculations:".localized()
+        setCaculationLabel.snp.makeConstraints({
+            $0.top.equalTo(setSpeedLabel.safeAreaLayoutGuide.snp.bottom).offset(70)
+            $0.left.equalToSuperview().offset(20)
         })
         calculationTextField.textAlignment = .center
         calculationTextField.backgroundColor = .white
+        calculationTextField.layer.cornerRadius = 12
         calculationTextField.snp.makeConstraints({
-            $0.top.equalTo(speedTextField).offset(50)
-            $0.right.equalToSuperview().offset(-30)
+            $0.top.equalTo(speedTextField.safeAreaLayoutGuide.snp.bottom).offset(30)
+            $0.left.equalTo(setCaculationLabel).offset(200)
             $0.width.equalTo(150)
+            $0.height.equalTo(50)
         })
         finishButton.layer.cornerRadius = 12
-        finishButton.setTitle("Confirm", for: .normal)
+        finishButton.setTitle("Confirm".localized(), for: .normal)
         finishButton.snp.makeConstraints({
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-50)
@@ -253,7 +255,13 @@ class SettingVC: UIViewController {
             $0.width.equalTo(360)
         })
         ruleLabel.numberOfLines = 0
-        ruleLabel.text = "* For Example: ( a + b ) \n Minimum < Maximum \n Number A = minimumA -> maxximumA \n Number B = minimumB -> maxximumB "
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) != nil {
+          return true
+       } else {
+          return false
+       }
     }
     @objc func presentVC() {
         comfirmData()
@@ -265,68 +273,13 @@ extension SettingVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch pickerView.tag {
-        case 1:
-            return number.count
-        case 2:
-            return number.count
-        case 3:
-            return number.count
-        case 4:
-            return number.count
-        case 5:
-            return speeds.count
-        case 6:
-            return calculations.count
-        default:
-            return 1
-        }
+        return speeds.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch pickerView.tag {
-        case 1:
-            return number[row]
-        case 2:
-            return number[row]
-        case 3:
-            return number[row]
-        case 4:
-            return number[row]
-        case 5:
-            return speeds[row]
-        case 6:
-            return calculations[row]
-        default:
-            return "Data not found."
-        }
+        return speeds[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch pickerView.tag {
-        case 1:
-            minimumATextField.text = number[row]
-            minimumATextField.resignFirstResponder()
-        case 2:
-            maximumATextField.text = number[row]
-            maximumATextField.resignFirstResponder()
-        case 3:
-            minimumBTextField.text = number[row]
-            minimumBTextField.resignFirstResponder()
-        case 4:
-            maximumBTextField.text = number[row]
-            maximumBTextField.resignFirstResponder()
-        case 5:
-            speedTextField.text = speeds[row]
-            speedTextField.resignFirstResponder()
-        case 6:
-            calculationTextField.text = calculations[row]
-            calculationTextField.resignFirstResponder()
-        default:
-            return
-        }
-
-    }
-    
-    
-}
+        speedTextField.text = speeds[row]
+        speedTextField.resignFirstResponder()
+    }}

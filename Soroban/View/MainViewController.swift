@@ -41,7 +41,8 @@ class MainViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
         
-        mathsLabel.text = "Math Operations"
+        mathsLabel.text = "MathOperations".localized()
+        print(mathsLabel)
         mathsLabel.font = .systemFont(ofSize: 60, weight: .heavy)
         mathsLabel.textColor = .black
         mathsLabel.textAlignment = .center

@@ -72,7 +72,7 @@ class Multiply: UIViewController {
         numberLabel.reloadInputViews()
     }
     @objc func finnish() {
-        numberLabel.text = "\(startNumber)"
+        numberLabel.text = "= \(startNumber)"
         reloadInputViews()
         finishButton.isHidden = true
         startButton.isHidden = false
@@ -127,7 +127,7 @@ class Multiply: UIViewController {
             $0.height.equalTo(80)
         })
         startButton.backgroundColor = .yellow
-        startButton.setTitle("Start", for: .normal)
+        startButton.setTitle("Start".localized(), for: .normal)
         startButton.titleLabel?.font = .systemFont(ofSize: 35, weight: .medium)
         startButton.setTitleColor(.black, for: .normal)
         startButton.titleLabel?.textAlignment = .center
@@ -140,7 +140,7 @@ class Multiply: UIViewController {
             $0.height.equalTo(80)
         })
         finishButton.titleLabel?.font = .systemFont(ofSize: 35, weight: .medium)
-        finishButton.setTitle("Finish", for: .normal)
+        finishButton.setTitle("Finish".localized(), for: .normal)
         finishButton.setTitleColor(.black, for: .normal)
         finishButton.layer.cornerRadius = 12
         finishButton.isHidden = true
