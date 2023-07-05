@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>556153463061-b312chsu94pf0l4j5htcl0kecb9a3gv6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.556153463061-b312chsu94pf0l4j5htcl0kecb9a3gv6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCXOmwLVTdLjOnlEexQtbeocsKW-xeYRi8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>556153463061</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.trongnghia.sorobaniOS</string>
+	<key>PROJECT_ID</key>
+	<string>soroban-maths-ios-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>soroban-maths-ios-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:556153463061:ios:a2ed53e9cd5e9f586a491c</string>
+</dict>
+</plist>
