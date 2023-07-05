@@ -24,6 +24,7 @@
 		C69786BF2A4EC1F600EFE9F3 /* SettingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786BE2A4EC1F600EFE9F3 /* SettingsUseCase.swift */; };
 		C69786C12A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786C02A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift */; };
 		C69786C92A4EC8B200EFE9F3 /* AppInfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69786C82A4EC8B200EFE9F3 /* AppInfoRepository.swift */; };
+		C69D5FEE2A53D68200BB78ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C69D5FED2A53D68200BB78ED /* GoogleService-Info.plist */; };
 		C69DA3322A4D795A00F9BF75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C69DA3342A4D795A00F9BF75 /* Localizable.strings */; };
 		C69DA3372A4DE25E00F9BF75 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69DA3362A4DE25E00F9BF75 /* String.swift */; };
 		C6A7DD932A3EAA6B00420A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */; };
@@ -59,10 +60,11 @@
 		C69786BE2A4EC1F600EFE9F3 /* SettingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUseCase.swift; sourceTree = "<group>"; };
 		C69786C02A4EC42D00EFE9F3 /* RepositoryFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactoryProtocol.swift; sourceTree = "<group>"; };
 		C69786C82A4EC8B200EFE9F3 /* AppInfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoRepository.swift; sourceTree = "<group>"; };
+		C69D5FED2A53D68200BB78ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C69D5FF02A54036800BB78ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C69DA3332A4D795A00F9BF75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C69DA3352A4D795F00F9BF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C69DA3362A4DE25E00F9BF75 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		C69DA3382A4DE56800F9BF75 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6A7DD8F2A3EAA6B00420A81 /* Soroban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soroban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A7DD922A3EAA6B00420A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6A7DD942A3EAA6B00420A81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,17 +210,9 @@
 		C69786B72A4EC0E300EFE9F3 /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
-				C69786BA2A4EC15B00EFE9F3 /* Doumain */,
 				C69786B82A4EC0ED00EFE9F3 /* DIContainer.swift */,
 			);
 			path = DIContainer;
-			sourceTree = "<group>";
-		};
-		C69786BA2A4EC15B00EFE9F3 /* Doumain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Doumain;
 			sourceTree = "<group>";
 		};
 		C69786BD2A4EC1DC00EFE9F3 /* UserCases */ = {
@@ -279,6 +273,7 @@
 				C6A7DD9B2A3EAA6C00420A81 /* Assets.xcassets */,
 				C6A7DD9D2A3EAA6C00420A81 /* LaunchScreen.storyboard */,
 				C6A7DDA02A3EAA6C00420A81 /* Info.plist */,
+				C69D5FED2A53D68200BB78ED /* GoogleService-Info.plist */,
 				C69DA3342A4D795A00F9BF75 /* Localizable.strings */,
 			);
 			path = Sources;
@@ -365,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69D5FEE2A53D68200BB78ED /* GoogleService-Info.plist in Resources */,
 				C6A7DD9F2A3EAA6C00420A81 /* LaunchScreen.storyboard in Resources */,
 				C69DA3322A4D795A00F9BF75 /* Localizable.strings in Resources */,
 				C6A7DD9C2A3EAA6C00420A81 /* Assets.xcassets in Resources */,
@@ -464,7 +460,7 @@
 		C6A7DD9D2A3EAA6C00420A81 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C69DA3382A4DE56800F9BF75 /* en */,
+				C69D5FF02A54036800BB78ED /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -523,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -578,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -6,6 +6,8 @@
 "button_finish" = "Kết thúc";
 "button_confirm" = "Xác nhận";
 
+"label_ready" = "Sẵn sàng";
+
 "setting_numbera" = "Chọn số ngẫu nhiên A :";
 "setting_numberb" = "Chọn số ngẫu nhiên B :";
 "setting_from" = "Bắt đầu từ số:";

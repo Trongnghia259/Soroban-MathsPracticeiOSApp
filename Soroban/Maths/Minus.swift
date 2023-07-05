@@ -7,8 +7,18 @@
 
 import Foundation
 import SnapKit
+import GoogleMobileAds
 
 class Minus: UIViewController {
+    
+    private let banner: GADBannerView = {
+        let banner = GADBannerView()
+        banner.adUnitID = "ca-app-pub-4835926675743094/4261140919"
+        banner.load(GADRequest())
+        banner.backgroundColor = .secondarySystemBackground
+        return banner
+    }()
+    
     var minA = 1
     var maxA = 10
     var minB = 1
@@ -37,7 +47,7 @@ class Minus: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getValue()
-        setUI()
+        settingUI()
     }
     func getValue() {
         minA = UserDefaults.standard.integer(forKey: "minA")
@@ -74,7 +84,11 @@ class Minus: UIViewController {
     }
     func openAnimate() {
         UIView.animate(withDuration: speed/2, animations: { [self] in
-            numberLabel.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+            numberLabel.frame = CGRect(x: 0,
+                                       y: 0,
+                                       width: view.frame.size.width/2,
+                                       height: view.frame.size.width
+            )
             numberLabel.center = view.center
         })
     }
@@ -97,50 +111,59 @@ class Minus: UIViewController {
         finishButton.isHidden = true
         startButton.isHidden = false
     }
-    func setUI() {
-        navigationController?.navigationBar.backItem?.titleView?.backgroundColor = .black
-        imageView = UIImageView(frame: view.bounds)
+}
+
+extension Minus {
+    func settingUI() {
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        imageView = UIImageView(frame: .zero)
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
         imageView.image = backgroundImage
         view.addSubview(imageView)
-        self.view.sendSubviewToBack(imageView)
         view.addSubview(numberLabel)
         view.addSubview(startButton)
         view.addSubview(finishButton)
+        view.addSubview(banner)
+
         imageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.bottom.equalTo(banner.snp.top)
         }
         numberLabel.snp.makeConstraints({
             $0.center.equalToSuperview()
-            $0.size.equalTo(250)
+            $0.size.equalTo(view.frame.size.width/2.5)
         })
         numberLabel.text = "\(startNumber)"
-        numberLabel.backgroundColor = .systemBlue
+        numberLabel.backgroundColor = .red
         numberLabel.layer.masksToBounds = true
-        numberLabel.adjustsFontSizeToFitWidth = true
-        numberLabel.layer.cornerRadius = 125
+        numberLabel.layer.cornerRadius = view.frame.size.width/5
         numberLabel.textColor = .white
+        numberLabel.adjustsFontSizeToFitWidth = true
         numberLabel.textAlignment = .center
-        numberLabel.font = .systemFont(ofSize: 70, weight: .heavy)
+        numberLabel.font = .systemFont(ofSize: view.frame.size.width/5,
+                                       weight: .heavy)
         startButton.snp.makeConstraints({
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(numberLabel).offset(400)
-            $0.width.equalTo(200)
-            $0.height.equalTo(80)
+            $0.top.equalTo(numberLabel.snp.bottom).offset(30)
+            $0.width.equalTo(view.frame.size.width/2)
+            $0.height.equalTo(view.frame.size.width/6)
         })
         startButton.backgroundColor = .yellow
         startButton.setTitle(Localization.Button.start.localized, for: .normal)
-        startButton.titleLabel?.font = .systemFont(ofSize: 35, weight: .medium)
+        startButton.titleLabel?.font = .systemFont(ofSize: 35,
+                                                   weight: .medium)
         startButton.setTitleColor(.black, for: .normal)
         startButton.titleLabel?.textAlignment = .center
         startButton.addTarget(nil, action: #selector(start), for: .touchUpInside)
         startButton.layer.cornerRadius = 12
         finishButton.snp.makeConstraints({
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(numberLabel).offset(400)
-            $0.width.equalTo(200)
-            $0.height.equalTo(80)
+            $0.top.equalTo(numberLabel.snp.bottom).offset(30)
+            $0.width.equalTo(view.frame.size.width/2)
+            $0.height.equalTo(view.frame.size.width/6)
         })
         finishButton.titleLabel?.font = .systemFont(ofSize: 35, weight: .medium)
         finishButton.setTitle(Localization.Button.finish.localized, for: .normal)
@@ -148,5 +171,12 @@ class Minus: UIViewController {
         finishButton.layer.cornerRadius = 12
         finishButton.isHidden = true
         finishButton.addTarget(nil, action: #selector(finnish), for: .touchUpInside)
+        banner.snp.makeConstraints({
+            $0.bottom.equalToSuperview()
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.height.equalTo(view.frame.size.height/11)
+        })
     }
 }
+

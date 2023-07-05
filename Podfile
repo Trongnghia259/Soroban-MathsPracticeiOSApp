@@ -8,4 +8,8 @@ target 'Soroban' do
   # Pods for Soroban
 	pod 'SnapKit'
 	pod 'RxSwift'
+	pod 'Google-Mobile-Ads-SDK'
+	pod 'FirebaseAnalytics'
+
 end
+

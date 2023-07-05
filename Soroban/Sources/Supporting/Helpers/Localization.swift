@@ -36,6 +36,13 @@ extension Localization {
         case langVietnamese = "language_vietnamese"
     }
 }
+//  MARK: - Label
+
+extension Localization {
+    enum Label: String {
+        case ready = "label_ready"
+    }
+}
 
 // MARK: - Button
 

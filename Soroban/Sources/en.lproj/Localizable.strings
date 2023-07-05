@@ -5,6 +5,8 @@
 "button_finish" = "Finish";
 "button_confirm" = "Confirm";
 
+"label_ready" = "Ready";
+
 "setting_numbera" = "Set random number A :";
 "setting_numberb" = "Set random number B :";
 "setting_from" = "From :";

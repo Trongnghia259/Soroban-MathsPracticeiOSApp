@@ -54,6 +54,7 @@ class SettingVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
         view.backgroundColor = .systemGray5
         setUI()
         setLayout()
